@@ -2,6 +2,8 @@ from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin, BaseUserManager
 from django.db import models
 
+from fitness.models import Fitness
+
 
 class UserManager(BaseUserManager):
     use_in_migrations = True
@@ -29,11 +31,15 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    username = models.CharField(max_length=45, unique=True, primary_key=True)
+    username = models.CharField(max_length=45, primary_key=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     phone = models.CharField(max_length=25)
+    fitness = models.ForeignKey(Fitness, on_delete=models.CASCADE)
 
     objects = UserManager()
 
     USERNAME_FIELD = 'username'
+
+    def __str__(self):
+        return self.username

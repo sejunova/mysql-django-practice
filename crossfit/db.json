@@ -654,7 +654,7 @@
     "workout_name": "eva",
     "record_time": 2150,
     "workout_date": "2018-03-20",
-    "user": "user1"
+    "username": "user1"
   }
 },
 {
@@ -664,7 +664,7 @@
     "workout_name": "eva",
     "record_time": 2130,
     "workout_date": "2018-02-13",
-    "user": "user1"
+    "username": "user1"
   }
 },
 {
@@ -674,7 +674,7 @@
     "workout_name": "eva",
     "record_time": 2000,
     "workout_date": "2018-03-20",
-    "user": "user2"
+    "username": "user2"
   }
 },
 {
@@ -684,7 +684,7 @@
     "workout_name": "eva",
     "record_time": 2200,
     "workout_date": "2018-03-15",
-    "user": "user2"
+    "username": "user2"
   }
 },
 {
@@ -694,7 +694,7 @@
     "workout_name": "helen",
     "record_time": 1500,
     "workout_date": "2018-03-20",
-    "user": "user3"
+    "username": "user3"
   }
 },
 {
@@ -704,7 +704,7 @@
     "workout_name": "helen",
     "record_time": 1800,
     "workout_date": "2018-02-20",
-    "user": "user3"
+    "username": "user3"
   }
 },
 {
@@ -714,7 +714,7 @@
     "workout_name": "eva",
     "record_time": 2549,
     "workout_date": "2018-03-20",
-    "user": "user4"
+    "username": "user4"
   }
 },
 {
@@ -724,7 +724,7 @@
     "workout_name": "eva",
     "record_time": 2800,
     "workout_date": "2018-02-26",
-    "user": "user4"
+    "username": "user4"
   }
 },
 {
@@ -734,7 +734,7 @@
     "workout_name": "eva",
     "record_time": 2321,
     "workout_date": "2018-03-20",
-    "user": "user5"
+    "username": "user5"
   }
 },
 {
@@ -744,7 +744,7 @@
     "workout_name": "eva",
     "record_time": 2121,
     "workout_date": "2018-03-16",
-    "user": "user5"
+    "username": "user5"
   }
 },
 {
@@ -754,7 +754,7 @@
     "workout_name": "helen",
     "record_time": 3000,
     "workout_date": "2018-03-19",
-    "user": "user6"
+    "username": "user6"
   }
 },
 {
@@ -764,7 +764,7 @@
     "workout_name": "helen",
     "record_time": 3221,
     "workout_date": "2018-02-13",
-    "user": "user6"
+    "username": "user6"
   }
 },
 {
@@ -774,7 +774,7 @@
     "workout_name": "eva",
     "record_time": 2323,
     "workout_date": "2018-03-20",
-    "user": "user7"
+    "username": "user7"
   }
 },
 {
@@ -784,7 +784,7 @@
     "workout_name": "eva",
     "record_time": 2325,
     "workout_date": "2018-03-06",
-    "user": "user7"
+    "username": "user7"
   }
 },
 {
@@ -794,7 +794,7 @@
     "workout_name": "eva",
     "record_time": 2111,
     "workout_date": "2018-03-20",
-    "user": "user8"
+    "username": "user8"
   }
 },
 {
@@ -804,7 +804,7 @@
     "workout_name": "eva",
     "record_time": 1990,
     "workout_date": "2018-02-20",
-    "user": "user8"
+    "username": "user8"
   }
 },
 {
@@ -814,7 +814,7 @@
     "workout_name": "helen",
     "record_time": 1500,
     "workout_date": "2018-02-06",
-    "user": "user9"
+    "username": "user9"
   }
 },
 {
@@ -824,7 +824,7 @@
     "workout_name": "helen",
     "record_time": 1550,
     "workout_date": "2018-02-28",
-    "user": "user9"
+    "username": "user9"
   }
 },
 {
@@ -834,7 +834,7 @@
     "workout_name": "eva",
     "record_time": 2443,
     "workout_date": "2018-02-06",
-    "user": "user10"
+    "username": "user10"
   }
 },
 {
@@ -844,7 +844,7 @@
     "workout_name": "eva",
     "record_time": 2443,
     "workout_date": "2018-02-24",
-    "user": "user10"
+    "username": "user10"
   }
 },
 {
@@ -854,7 +854,7 @@
     "workout_name": "eva",
     "record_time": 2664,
     "workout_date": "2018-02-10",
-    "user": "user11"
+    "username": "user11"
   }
 },
 {
@@ -864,7 +864,7 @@
     "workout_name": "eva",
     "record_time": 2655,
     "workout_date": "2018-03-20",
-    "user": "user11"
+    "username": "user11"
   }
 },
 {
@@ -874,7 +874,7 @@
     "workout_name": "helen",
     "record_time": 1443,
     "workout_date": "2018-03-20",
-    "user": "user12"
+    "username": "user12"
   }
 },
 {
@@ -884,7 +884,7 @@
     "workout_name": "helen",
     "record_time": 1445,
     "workout_date": "2018-03-15",
-    "user": "user12"
+    "username": "user12"
   }
 },
 {
@@ -894,7 +894,7 @@
     "workout_name": "eva",
     "record_time": 2800,
     "workout_date": "2018-03-15",
-    "user": "user13"
+    "username": "user13"
   }
 },
 {
@@ -904,7 +904,7 @@
     "workout_name": "eva",
     "record_time": 2700,
     "workout_date": "2018-03-20",
-    "user": "user13"
+    "username": "user13"
   }
 },
 {
@@ -914,7 +914,7 @@
     "workout_name": "eva",
     "record_time": 2445,
     "workout_date": "2018-02-04",
-    "user": "user14"
+    "username": "user14"
   }
 },
 {
@@ -924,7 +924,7 @@
     "workout_name": "eva",
     "record_time": 2555,
     "workout_date": "2018-02-21",
-    "user": "user14"
+    "username": "user14"
   }
 },
 {
@@ -934,7 +934,7 @@
     "workout_name": "eva",
     "record_time": 2000,
     "workout_date": "2018-03-14",
-    "user": "user15"
+    "username": "user15"
   }
 },
 {
@@ -944,7 +944,7 @@
     "workout_name": "eva",
     "record_time": 2001,
     "workout_date": "2018-03-20",
-    "user": "user15"
+    "username": "user15"
   }
 },
 {
@@ -954,7 +954,7 @@
     "workout_name": "helen",
     "record_time": 1200,
     "workout_date": "2018-03-07",
-    "user": "user15"
+    "username": "user15"
   }
 },
 {
@@ -964,7 +964,7 @@
     "workout_name": "helen",
     "record_time": 1230,
     "workout_date": "2018-03-20",
-    "user": "user15"
+    "username": "user15"
   }
 },
 {

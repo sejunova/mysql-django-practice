@@ -8,7 +8,7 @@ class WorkoutRecord(models.Model):
     workout_name = models.CharField(max_length=20)
     record_time = models.PositiveIntegerField()
     workout_date = models.DateField()
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    username = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.workout_name

@@ -27,7 +27,7 @@ class RankRetrieveView(APIView):
         queryset = self._get_queryset()
         serializer = WorkoutRankSerializer(queryset, many=True)
         data = serializer.data
-        return Response(data)
+        return Response(self.add_rank_to_dict(data))
 
     def _get_queryset(self):
         workout = self.request.query_params.get('workout', None)
@@ -38,6 +38,27 @@ class RankRetrieveView(APIView):
         queryset = queryset.filter(workout_name=workout).order_by('record_time')
         return queryset
 
+    def add_rank_to_dict(self, data):
+        data[0]['rank'] = 1
+        previous_record = data[0].get('record_time')
+
+        cur_rank = 1
+        for i, person in enumerate(data[1:]):
+            if person.get('record_time') != previous_record:
+                cur_rank = i+2
+                previous_record = person.get('record_time')
+            person['rank'] = cur_rank
+        return data
+
+    # def add_rank_to_dict(self, data):
+    #     cur_rank = 1
+    #     num_of_same_record = 0
+    #     previous_record = 0
+    #     for person in data:
+    #         if person['record_time'] != previous_record:
+    #             cur_rank += num_of_same_record
+    #             person['rank'] = cur_rank
+    #         else:
 
     # def get(self, request):
     #     workout = self.request.query_params.get('workout', None)

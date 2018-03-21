@@ -20,5 +20,5 @@ from workout.api import RankRetrieveView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('rank/', RankRetrieveView.as_view()),
+    path('rank/', RankRetrieveView.as_view(), name='rank'),
 ]

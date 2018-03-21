@@ -14,11 +14,11 @@ class RankRetrieveView(APIView):
         workout, date_from, date_to가 추가적인 쿼리로 함께 전달될 수 있습니다.
         :return: 랭킹, 기록시간, 크로스핏 회원 아이디, 크로스핏 센터를 담은 OrderedDict 데이터 집합을 리스트에 담아 반환합니다
         '''
-        params = self.check_query_params()
+        params = self._check_query_params()
         queryset = self._get_queryset(**params)
         serializer = WorkoutRankSerializer(queryset, many=True)
         data = serializer.data
-        return Response(self.add_rank_to_dict(data))
+        return Response(self._add_rank_to_dict(data))
 
     def _get_queryset(self, **params):
         # Group by 조건으로 각 개인의 최고기록만 추출
@@ -30,23 +30,30 @@ class RankRetrieveView(APIView):
         queryset = queryset.order_by('record_time')
         return queryset
 
-    def check_query_params(self):
+    def _check_query_params(self):
         '''
         GET 요청과 함께 들어온 쿼리를 검사합니다.
         workout은 필수로 넣어야 하는 쿼리이고, date_from, date_to 를 포함하는 경우에는 두 개의 쿼리 모두 함께 요청되어야 합니다.
         :return: 쿼리를 dict로 반환합니다. 요청되지 않은 쿼리값은 None 으로 처리합니다.
         '''
+        acceptable_query_params = ['workout', 'date_from', 'date_to']
+        for param in self.request.query_params.keys():
+            if param not in acceptable_query_params:
+                raise ParseError(detail={
+                    "message": f'''잘못된 query parameter를 전달하였습니다. 사용 가능한 쿼리: {', '.join(acceptable_query_params)}'''})
+
         workout = self.request.query_params.get('workout', None)
         date_from = self.request.query_params.get('date_from', None)
         date_to = self.request.query_params.get('date_to', None)
 
         if not workout:
-            raise ParseError(detail={"error": "workout 필드가 비어있습니다."})
+            raise ParseError(detail={"message": "query paramter workout은 반드시 필요합니다"})
         if (date_from or date_to) and not (date_from and date_to):
-            raise ParseError(detail={"error": "날짜 입력을 정확하게 해 주세요"})
+            raise ParseError(detail={"message": "날짜 입력을 정확하게 해 주세요"})
         return dict(workout=workout, date_from=date_from, date_to=date_to)
 
-    def add_rank_to_dict(self, data):
+    @staticmethod
+    def _add_rank_to_dict(data):
         '''
         :param data: 쿼리셋 조건에 맞게 필터링된 데이터 집합.
         :return: 각각의 데이터 집합에 rank를 추가해서 반환합니다.

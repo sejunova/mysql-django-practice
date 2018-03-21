@@ -22,6 +22,10 @@ class TestRankRetrieveView(APITestCase):
     url = reverse('rank')
 
     def test_wrong_query_raise_eror(self):
+        '''
+        잘못된 query param을 보냈을 때 status_code가 400이 되는지 확인
+        각각 'workout' param이 없는 경우, 잘못된 param을 보낸 경우, 전후 날짜중 한 쪽만 선택한 경우 테스트
+        '''
         wrong_query_list = [{}, {'workoutt': 'eva'}, {'workout': 'eva', 'date_from': '2018-02-01'}]
         for wrong_query in wrong_query_list:
             response = self.client.get(self.url, wrong_query)
